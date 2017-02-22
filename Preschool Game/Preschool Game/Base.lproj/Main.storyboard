@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,35 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-8M-JZR" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="154" y="555" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="L9b-EA-NKd" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="131" y="502" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="jsB-xE-aic" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="89" y="537" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-3Q-Rbg" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="115" y="584" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="RHv-fi-1If" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="223" y="565" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="Thy-VO-5JH" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="55" y="473" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="TD2-28-sp3" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="120" y="427" width="57" height="56"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-Gs-62g" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="41" y="555" width="57" height="56"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXj-gQ-aHY">
-                                <rect key="frame" x="55" y="251" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O71-9K-f3e">
+                                        <rect key="frame" x="56" y="244" width="304" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbs_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-eK-Da0">
+                                        <rect key="frame" x="14" y="321" width="85" height="85"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMm-16-8tn">
-                                        <rect key="frame" x="0.0" y="8" width="94" height="68"/>
+                                        <rect key="frame" x="107" y="283" width="161" height="161"/>
                                         <state key="normal" title="Button" image="play_again.png"/>
                                         <connections>
                                             <action selector="replayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="muN-k5-t3B"/>
@@ -63,45 +48,102 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbw-ep-QFQ">
                                 <rect key="frame" x="46" y="20" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number0.png"/>
+                                <connections>
+                                    <action selector="ans0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqq-JB-EY5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppt-NF-HTY">
                                 <rect key="frame" x="106" y="20" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number1.png"/>
+                                <connections>
+                                    <action selector="ans1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Avc-XC-Zc5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqq-GQ-Qxd">
                                 <rect key="frame" x="165" y="21" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number2.png"/>
+                                <connections>
+                                    <action selector="ans2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0e2-PD-lSh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-bW-E7g">
                                 <rect key="frame" x="165" y="86" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number7.png"/>
+                                <connections>
+                                    <action selector="ans7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INP-ft-s5d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2I-aQ-K1y">
                                 <rect key="frame" x="283" y="86" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number9.png"/>
+                                <connections>
+                                    <action selector="ans9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8zt-6v-uM2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-Cf-GnV">
                                 <rect key="frame" x="223" y="21" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number3.png"/>
+                                <connections>
+                                    <action selector="ans3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41A-i9-X5N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiW-BC-N5x">
                                 <rect key="frame" x="283" y="21" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number4.png"/>
+                                <connections>
+                                    <action selector="ans4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oL6-4C-oh1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-Ae-Onj">
                                 <rect key="frame" x="106" y="86" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number6.png"/>
+                                <connections>
+                                    <action selector="ans6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzo-qP-y5g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbR-Sn-39n">
                                 <rect key="frame" x="223" y="86" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number8.png"/>
+                                <connections>
+                                    <action selector="ans8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4dQ-MP-xi0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD5-kY-eta">
                                 <rect key="frame" x="46" y="86" width="52" height="57"/>
                                 <state key="normal" title="Button" image="number5.png"/>
+                                <connections>
+                                    <action selector="ans5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkT-Ym-UXI"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plate_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="uuK-QJ-XUm">
+                                <rect key="frame" x="8" y="455" width="356" height="182"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-3Q-Rbg" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="108" y="485" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="L9b-EA-NKd" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="124" y="513" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="TD2-28-sp3" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="218" y="518" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-8M-JZR" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="158" y="480" width="57" height="56"/>
+                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-Vr-OBU" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
-                                <rect key="frame" x="185" y="479" width="57" height="56"/>
+                                <rect key="frame" x="72" y="518" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="Thy-VO-5JH" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="31" y="499" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="jsB-xE-aic" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="173" y="518" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="RHv-fi-1If" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="255" y="505" width="57" height="56"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xwi-Gs-62g" customClass="DraggedImageView" customModule="Preschool_Game" customModuleProvider="target">
+                                <rect key="frame" x="204" y="480" width="57" height="56"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -110,6 +152,7 @@
                     <connections>
                         <outlet property="congratulationsScreen" destination="cXj-gQ-aHY" id="DrW-xX-w17"/>
                         <outlet property="question" destination="Lss-GH-ZcE" id="bAi-kd-3xp"/>
+                        <outlet property="viewControl" destination="8bC-Xf-vdC" id="YRe-NN-EVR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -129,6 +172,8 @@
         <image name="number7.png" width="256" height="256"/>
         <image name="number8.png" width="256" height="256"/>
         <image name="number9.png" width="256" height="256"/>
+        <image name="plate_white.png" width="1600" height="1200"/>
         <image name="play_again.png" width="216" height="218"/>
+        <image name="thumbs_up.png" width="256" height="256"/>
     </resources>
 </document>
