@@ -18,43 +18,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plate_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="D37-fp-tz7">
-                                <rect key="frame" x="66" y="455" width="240" height="128"/>
+                                <rect key="frame" x="65" y="519" width="240" height="128"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="jz9-Qq-ctn">
-                                <rect key="frame" x="85" y="486" width="53" height="47"/>
+                                <rect key="frame" x="90" y="547" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="MOC-JU-2Q1">
-                                <rect key="frame" x="161" y="474" width="53" height="47"/>
+                                <rect key="frame" x="166" y="535" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="YxR-ww-h6F">
-                                <rect key="frame" x="137" y="495" width="53" height="47"/>
+                                <rect key="frame" x="142" y="556" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-Mi-65Z">
-                                <rect key="frame" x="117" y="474" width="53" height="47"/>
+                                <rect key="frame" x="122" y="535" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="iYM-CG-FLU">
-                                <rect key="frame" x="178" y="495" width="53" height="47"/>
+                                <rect key="frame" x="183" y="556" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="XP0-yN-qcb">
-                                <rect key="frame" x="222" y="474" width="53" height="47"/>
+                                <rect key="frame" x="227" y="535" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="pML-RZ-yPD">
-                                <rect key="frame" x="214" y="486" width="53" height="47"/>
+                                <rect key="frame" x="219" y="547" width="53" height="47"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="lI9-b7-gdn">
-                                <rect key="frame" x="50" y="235" width="123" height="118"/>
+                                <rect key="frame" x="31" y="235" width="142" height="146"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aaj-U6-M77">
-                                <rect key="frame" x="248" y="378" width="69" height="64"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="mff-Gk-zvR">
-                                <rect key="frame" x="227" y="291" width="55" height="52"/>
+                                <rect key="frame" x="257" y="441" width="69" height="64"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="JzO-ka-H7u">
                                 <rect key="frame" x="42" y="19" width="123" height="118"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="IVE-ty-VVL">
                                 <rect key="frame" x="227" y="159" width="78" height="74"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star_kids.png" translatesAutoresizingMaskIntoConstraints="NO" id="mff-Gk-zvR">
+                                <rect key="frame" x="239" y="310" width="87" height="82"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294119999996" green="0.99215686270000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>

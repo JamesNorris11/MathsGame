@@ -43,21 +43,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var thumb: UIImageView!
     @IBOutlet weak var qMark: UILabel!
     
+    // For counting questions done
     var qDone = 0
-    var firstNo:[Int] =  [3, 2, 2, 1, 0, 4, 3]
-    var secondNo:[Int] = [1, 7, 2, 5, 3, 4, 2]
-    var answers:[Int] =  [4, 9, 4, 6, 3, 8, 5]
+    // Set questions and answers
+    var firstNo:[Int] =  [3, 2, 2, 1, 0, 4, 3, 0, 5, 0, 6, 3, 8, 2]
+    var secondNo:[Int] = [1, 7, 2, 5, 3, 4, 2, 1, 4, 0, 2, 4, 1, 0]
+    var answers:[Int] =  [4, 9, 4, 6, 3, 8, 5, 1, 9, 0, 8, 7, 9, 2]
  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " ="
+        
         congratulationsScreen.hidden = true
         
         playBackgroundMusic("Hide & Seek.mp3")
         
+        // rotate star images on congratulations screen
+        rotateStars()
+        
     }
     
+    // For when the replay button is clicked
     @IBAction func replayButton(sender: UIButton) {
         
         // Check if there are more questions left
@@ -65,6 +73,7 @@ class ViewController: UIViewController {
             qDone = 0
         }
         
+        // Display question on the screen
         question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " ="
         congratulationsScreen.hidden = true
     }
@@ -109,26 +118,32 @@ class ViewController: UIViewController {
         isCorrect(9)
     }
     
+    // Checks if selected button represents correct answer
     func isCorrect(ans: Int) {
         if ans == answers[qDone] {
             // correct answer - congrats screen view
             
+            //show Congrats screen
             congratulationsScreen.hidden = false
             
+            // Show question and correct answer on screen
             correctAns.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " = " + String(answers[qDone])
             
-            rotateStars(1.5)
+            // thumb image bounce animation
+            bounceThumb()
             
-            
+            // Questions done increased by one
             qDone = qDone + 1
         }
         else {
+            // function for wrong answer
             wrongAns()
         }
     }
     
-    func rotateStars(speed: Double) {
-        UIView.animateWithDuration(speed, delay: 0, options: .CurveLinear, animations: { () -> Void in
+    func rotateStars() {
+        
+        UIView.animateWithDuration(1.5, delay: 0, options: .CurveLinear, animations: { () -> Void in
             
             self.star1.transform = CGAffineTransformRotate(self.star1.transform, CGFloat(M_PI_2))
             self.star2.transform = CGAffineTransformRotate(self.star2.transform, CGFloat(M_PI_2))
@@ -137,10 +152,23 @@ class ViewController: UIViewController {
             self.star5.transform = CGAffineTransformRotate(self.star5.transform, CGFloat(M_PI_2))
             
         }) { (finished) -> Void in
-            //self.rotateStars(0)
+            self.rotateStars()
         }
     }
     
+    // thumb image bounce animation
+    func bounceThumb() {
+        
+        self.thumb.center.y = self.congratulationsScreen.bounds.midY + 90
+        
+        UIView.animateWithDuration(1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 20, options: [], animations: {
+
+                self.thumb.center.y = self.congratulationsScreen.bounds.midY - 20
+            
+            }, completion: nil)
+    }
+    
+    // flash question mark and make it red when wrong answer is selected
     func wrongAns() {
         self.qMark.textColor = UIColor.redColor()
         UIView.animateWithDuration(0.3, animations: {() -> Void in
