@@ -11,12 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var congratulationsScreen: UIView!
-    @IBOutlet weak var mainScreen: UIView!
     @IBOutlet weak var question: UILabel!
-    @IBOutlet var viewControl: UIView!
+    @IBOutlet weak var correctAns: UILabel!
     
     var qDone = 0
-    var answer = 4
     var firstNo:[Int] =  [3, 2, 2, 1, 0, 4, 3]
     var secondNo:[Int] = [1, 7, 2, 5, 3, 4, 2]
     var answers:[Int] =  [4, 9, 4, 6, 3, 8, 5]
@@ -25,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        congratulationsScreen.hidden = true;
+        congratulationsScreen.hidden = true
         
     }
     
@@ -36,56 +34,59 @@ class ViewController: UIViewController {
             // no more questions left
         }
         else {
-            question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + "= ?"
-            viewControl.hidden = false
+            question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " ="
+            congratulationsScreen.hidden = true
         }
     }
 
     @IBAction func ans0(sender: UIButton) {
-        correct(0)
+        isCorrect(0)
     }
     
     @IBAction func ans1(sender: UIButton) {
-        correct(1)
+        isCorrect(1)
     }
     
     @IBAction func ans2(sender: UIButton) {
-        correct(2)
+        isCorrect(2)
     }
     
     @IBAction func ans3(sender: UIButton) {
-        correct(3)
+        isCorrect(3)
     }
     
     @IBAction func ans4(sender: UIButton) {
-        correct(4)
+        isCorrect(4)
     }
     
     @IBAction func ans5(sender: UIButton) {
-        correct(5)
+        isCorrect(5)
     }
     
     @IBAction func ans6(sender: UIButton) {
-        correct(6)
+        isCorrect(6)
     }
     
     @IBAction func ans7(sender: UIButton) {
-        correct(7)
+        isCorrect(7)
     }
     
     @IBAction func ans8(sender: UIButton) {
-        correct(8)
+        isCorrect(8)
     }
     
     @IBAction func ans9(sender: UIButton) {
-        correct(9)
+        isCorrect(9)
     }
-
     
-    func correct(ans: Int) {
+    func isCorrect(ans: Int) {
         if ans == answers[qDone] {
             // correct answer - congrats screen view
-            viewControl.hidden = true
+            
+            congratulationsScreen.hidden = false
+            
+            correctAns.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " = " + String(answers[qDone])
+            
             qDone = qDone + 1
         }
         else {
