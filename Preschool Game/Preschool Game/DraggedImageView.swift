@@ -19,11 +19,22 @@ class DraggedImageView: UIImageView {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        let currentLocation = touches.first?.locationInView(self)
-        let dx = currentLocation!.x - startLocation!.x
-        let dy = currentLocation!.y - startLocation!.y
         
-        self.center = CGPointMake(self.center.x+dx, self.center.y+dy)
+        // Calculate offset
+        let pt = touches.first?.locationInView(self)
+        let dx = pt!.x - startLocation!.x
+        let dy = pt!.y - startLocation!.y
         
+        var newcenter = CGPoint(x: CGFloat(self.center.x + dx), y: CGFloat(self.center.y + dy))
+        // Constrain movement into parent bounds
+        let halfx = self.bounds.midX
+        newcenter.x = max(halfx, newcenter.x)
+        newcenter.x = min(self.superview!.bounds.size.width - halfx, newcenter.x)
+        let halfy = self.bounds.midY
+        newcenter.y = max(halfy + 270, newcenter.y)
+        newcenter.y = min(self.superview!.bounds.size.height - halfy, newcenter.y)
+
+        // Set new location
+        self.center = newcenter
     }
 }
