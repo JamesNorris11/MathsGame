@@ -11,15 +11,19 @@ import UIKit
 class DraggedImageView: UIImageView {
     
     var startLocation:CGPoint?
+    var originalSize:CGSize?
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         startLocation = touches.first?.locationInView(self)
         
+        // save original apple size and increase current size
+        originalSize = self.frame.size
+        let newSize = CGSize(width: self.frame.size.width * 1.4, height: self.frame.size.width * 1.4)
+        self.frame = CGRect(origin: self.frame.origin, size: newSize)
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-        
+
         // Calculate offset
         let pt = touches.first?.locationInView(self)
         let dx = pt!.x - startLocation!.x
@@ -38,5 +42,10 @@ class DraggedImageView: UIImageView {
 
         // Set new location
         self.center = newcenter
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        // Reset size
+        self.frame = CGRect(origin: self.frame.origin, size: originalSize!)
     }
 }
