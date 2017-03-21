@@ -41,7 +41,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var star4: UIImageView!
     @IBOutlet weak var star5: UIImageView!
     @IBOutlet weak var thumb: UIImageView!
-    @IBOutlet weak var qMark: UILabel!
+    @IBOutlet weak var apple1: DraggedImageView!
+    @IBOutlet weak var apple2: DraggedImageView!
+    @IBOutlet weak var apple3: DraggedImageView!
+    @IBOutlet weak var apple4: DraggedImageView!
+    @IBOutlet weak var apple5: DraggedImageView!
+    @IBOutlet weak var apple6: DraggedImageView!
+    @IBOutlet weak var apple7: DraggedImageView!
+    @IBOutlet weak var apple8: DraggedImageView!
+    @IBOutlet weak var apple9: DraggedImageView!
     
     // For counting questions done
     var qDone = 0
@@ -49,12 +57,22 @@ class ViewController: UIViewController {
     var firstNo:[Int] =  [3, 2, 2, 1, 0, 4, 3, 0, 5, 0, 6, 3, 8, 2]
     var secondNo:[Int] = [1, 7, 2, 5, 3, 4, 2, 1, 4, 0, 2, 4, 1, 0]
     var answers:[Int] =  [4, 9, 4, 6, 3, 8, 5, 1, 9, 0, 8, 7, 9, 2]
+    
+    var apple1Pos = CGPoint()
+    var apple2Pos = CGPoint()
+    var apple3Pos = CGPoint()
+    var apple4Pos = CGPoint()
+    var apple5Pos = CGPoint()
+    var apple6Pos = CGPoint()
+    var apple7Pos = CGPoint()
+    var apple8Pos = CGPoint()
+    var apple9Pos = CGPoint()
  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " ="
+        question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " = ?"
         
         congratulationsScreen.hidden = true
         
@@ -63,6 +81,21 @@ class ViewController: UIViewController {
         // rotate star images on congratulations screen
         rotateStars()
         
+        // save original apple positions
+        apple1Pos = apple1.frame.origin
+        apple2Pos = apple2.frame.origin
+        apple3Pos = apple3.frame.origin
+        apple4Pos = apple4.frame.origin
+        apple5Pos = apple5.frame.origin
+        apple6Pos = apple6.frame.origin
+        apple7Pos = apple7.frame.origin
+        apple8Pos = apple8.frame.origin
+        apple9Pos = apple9.frame.origin
+        
+        // Change font size of labels by a ratio based on screen size height pixels
+        let newFontSize = congratulationsScreen.bounds.size.height / 8
+        question.font = question.font.fontWithSize(newFontSize)
+        correctAns.font = question.font.fontWithSize(newFontSize)
     }
     
     // For when the replay button is clicked
@@ -74,8 +107,10 @@ class ViewController: UIViewController {
         }
         
         // Display question on the screen
-        question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " ="
+        question.text = String(firstNo[qDone]) + " + " + String(secondNo[qDone]) + " = ?"
         congratulationsScreen.hidden = true
+        
+        resetApples()
     }
 
     @IBAction func ans0(sender: UIButton) {
@@ -170,27 +205,36 @@ class ViewController: UIViewController {
     
     // flash question mark and make it red when wrong answer is selected
     func wrongAns() {
-        self.qMark.textColor = UIColor.redColor()
+        self.question.textColor = UIColor.redColor()
         UIView.animateWithDuration(0.3, animations: {() -> Void in
-            self.qMark.alpha = 0.0
+            self.question.alpha = 0.0
             },
                                    completion: { finished in
                                     UIView.animateWithDuration(0.3, animations: {
-                                        self.qMark.alpha = 1.0
-                                        self.qMark.textColor = UIColor.blackColor()
+                                        self.question.alpha = 1.0
+                                        self.question.textColor = UIColor.blackColor()
                                     })
         })
-                self.qMark.textColor = UIColor.redColor()
+                self.question.textColor = UIColor.redColor()
     }
     
-    
+    // reset Apples to their original positions on the plate
+    func resetApples() {
+        apple1.frame = CGRect(origin: apple1Pos, size: apple1.frame.size)
+        apple2.frame = CGRect(origin: apple2Pos, size: apple2.frame.size)
+        apple3.frame = CGRect(origin: apple3Pos, size: apple3.frame.size)
+        apple4.frame = CGRect(origin: apple4Pos, size: apple4.frame.size)
+        apple5.frame = CGRect(origin: apple5Pos, size: apple5.frame.size)
+        apple6.frame = CGRect(origin: apple6Pos, size: apple6.frame.size)
+        apple7.frame = CGRect(origin: apple7Pos, size: apple7.frame.size)
+        apple8.frame = CGRect(origin: apple8Pos, size: apple8.frame.size)
+        apple9.frame = CGRect(origin: apple9Pos, size: apple9.frame.size)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    
 
 }
 

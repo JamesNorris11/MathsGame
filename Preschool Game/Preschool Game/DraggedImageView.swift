@@ -31,7 +31,9 @@ class DraggedImageView: UIImageView {
         newcenter.x = max(halfx, newcenter.x)
         newcenter.x = min(self.superview!.bounds.size.width - halfx, newcenter.x)
         let halfy = self.bounds.midY
-        newcenter.y = max(halfy + 270, newcenter.y)
+        // (self.superview!.bounds.size.height * 0.4) moves top boundary limit down by
+        // 40% of screen height
+        newcenter.y = max(halfy + (self.superview!.bounds.size.height * 0.4), newcenter.y)
         newcenter.y = min(self.superview!.bounds.size.height - halfy, newcenter.y)
 
         // Set new location
